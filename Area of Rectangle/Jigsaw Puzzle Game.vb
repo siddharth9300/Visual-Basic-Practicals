@@ -1,39 +1,40 @@
 ﻿Public Class Jigsaw_Puzzle_Game
-    Private Sub Jigsaw_Puzzle_Game_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set the event handler for each PictureBox control
-        For i = 1 To 9
-            Dim pictureBox As PictureBox = DirectCast(Me.Controls("Image" & i), PictureBox)
-            pictureBox.AllowDrop = True
-            pictureBox.Tag = i ' Set the tag value to identify the pieces
 
-            AddHandler pictureBox.MouseDown, AddressOf Image_MouseDown
-            AddHandler pictureBox.DragEnter, AddressOf Image_DragEnter
-            AddHandler pictureBox.DragDrop, AddressOf Image_DragDrop
-        Next i
+    Private PictureBoxes As PictureBox()
+
+    Private Sub Jigsaw_Puzzle_Game_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PictureBoxes = New PictureBox() {Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9}
+
+        For Each pb In PictureBoxes
+            pb.AllowDrop = True
+            AddHandler pb.MouseDown, AddressOf PictureBox_MouseDown
+            AddHandler pb.DragEnter, AddressOf PictureBox_DragEnter
+            AddHandler pb.DragDrop, AddressOf PictureBox_DragDrop
+        Next
     End Sub
 
-    Private Sub Image_MouseDown(sender As Object, e As MouseEventArgs)
+    Private Sub PictureBox_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
+        Dim pb As PictureBox = DirectCast(sender, PictureBox)
         If e.Button = MouseButtons.Left Then
-            Dim pictureBox As PictureBox = DirectCast(sender, PictureBox)
-            pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move)
+            pb.DoDragDrop(pb, DragDropEffects.Move)
         End If
     End Sub
 
-    Private Sub Image_DragEnter(sender As Object, e As DragEventArgs)
-        If e.Data.GetDataPresent(DataFormats.Bitmap) Then
+    Private Sub PictureBox_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs)
+        If e.Data.GetDataPresent(GetType(PictureBox)) AndAlso DirectCast(e.Data.GetData(GetType(PictureBox)), PictureBox) IsNot DirectCast(sender, PictureBox) Then
             e.Effect = DragDropEffects.Move
         Else
             e.Effect = DragDropEffects.None
         End If
     End Sub
 
-    Private Sub Image_DragDrop(sender As Object, e As DragEventArgs)
+    Private Sub PictureBox_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs)
         Dim targetPictureBox As PictureBox = DirectCast(sender, PictureBox)
-        Dim sourcePictureBox As PictureBox = DirectCast(e.Data.GetData(GetType(PictureBox)), PictureBox)
+        Dim draggedPictureBox As PictureBox = DirectCast(e.Data.GetData(GetType(PictureBox)), PictureBox)
 
-        ' Swap the images between source and target picture boxes
+        ' Swap the images between the target PictureBox and the dragged PictureBox
         Dim tempImage As Image = targetPictureBox.Image
-        targetPictureBox.Image = sourcePictureBox.Image
-        sourcePictureBox.Image = tempImage
+        targetPictureBox.Image = draggedPictureBox.Image
+        draggedPictureBox.Image = tempImage
     End Sub
 End Class

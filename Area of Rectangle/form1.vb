@@ -1,11 +1,13 @@
-﻿Public Class Form1
+﻿Imports System.Security
+
+Public Class Form1
 
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
 
 
-        Dim Principle As Decimal
-        Principle = priBox.Text
+        Dim Principal As Decimal
+        Principal = priBox.Text
 
         Dim Rate As Decimal
         Rate = ratBox.Text
@@ -15,7 +17,7 @@
         Time = timBox.Text
 
 
-        siAns.Text = "Simple Interest is " & (Principle * Rate * Time) / 100
+        siAns.Text = "Simple Interest is " & (Principal * Rate * Time) / 100
 
 
 
@@ -23,7 +25,24 @@
     End Sub
 
 
+    Private Sub ComBtn_Click(sender As Object, e As EventArgs) Handles ComBtn.Click
 
+        Dim Principal As Decimal
+        Principal = comBox.Text
+
+        Dim Rate As Decimal
+        Rate = ComratBox.Text
+
+
+        Dim Time As Decimal
+        Time = ComtimBox.Text
+
+
+        comAns.Text = "Compound Interest is " & (Principal * (1 + Rate / 100) ^ Time)
+
+
+
+    End Sub
 
 
     Private Sub calcBtn_Click(sender As Object, e As EventArgs) Handles calcBtn.Click
@@ -141,16 +160,6 @@
 
     End Sub
 
-    Private Sub TabPage7_Click(sender As Object, e As EventArgs) Handles TabPage7.Click
-        Dim number As Integer
-
-        number = 5 ' Example value
-
-        For i = 1 To 10
-            ListBox1.Items.Add(number & " x " & i & " = " & number * i)
-        Next i
-
-    End Sub
 
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
 
@@ -185,4 +194,6 @@
         ' Show the "Quadratic_Equation_Solver" form
         jigsawform.Show()
     End Sub
+
+
 End Class

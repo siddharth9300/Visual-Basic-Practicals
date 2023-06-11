@@ -32,6 +32,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image9 = New PictureBox()
         Image8 = New PictureBox()
         Image7 = New PictureBox()
+        PictureBox1 = New PictureBox()
         CType(Image1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Image2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Image3, ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +42,7 @@ Partial Class Jigsaw_Puzzle_Game
         CType(Image9, ComponentModel.ISupportInitialize).BeginInit()
         CType(Image8, ComponentModel.ISupportInitialize).BeginInit()
         CType(Image7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Image1
@@ -48,7 +50,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image1.BackgroundImage = CType(resources.GetObject("Image1.BackgroundImage"), Image)
         Image1.BorderStyle = BorderStyle.FixedSingle
         Image1.Image = CType(resources.GetObject("Image1.Image"), Image)
-        Image1.Location = New Point(164, 52)
+        Image1.Location = New Point(90, 50)
         Image1.Margin = New Padding(0)
         Image1.Name = "Image1"
         Image1.Size = New Size(100, 100)
@@ -61,7 +63,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image2.BackgroundImage = CType(resources.GetObject("Image2.BackgroundImage"), Image)
         Image2.BorderStyle = BorderStyle.FixedSingle
         Image2.Image = CType(resources.GetObject("Image2.Image"), Image)
-        Image2.Location = New Point(264, 52)
+        Image2.Location = New Point(190, 50)
         Image2.Margin = New Padding(0)
         Image2.Name = "Image2"
         Image2.Size = New Size(100, 100)
@@ -75,7 +77,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image3.BackgroundImage = CType(resources.GetObject("Image3.BackgroundImage"), Image)
         Image3.BorderStyle = BorderStyle.FixedSingle
         Image3.Image = CType(resources.GetObject("Image3.Image"), Image)
-        Image3.Location = New Point(364, 52)
+        Image3.Location = New Point(290, 50)
         Image3.Margin = New Padding(0)
         Image3.Name = "Image3"
         Image3.Size = New Size(100, 100)
@@ -88,7 +90,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image6.BackgroundImage = CType(resources.GetObject("Image6.BackgroundImage"), Image)
         Image6.BorderStyle = BorderStyle.FixedSingle
         Image6.Image = CType(resources.GetObject("Image6.Image"), Image)
-        Image6.Location = New Point(364, 152)
+        Image6.Location = New Point(290, 150)
         Image6.Margin = New Padding(0)
         Image6.Name = "Image6"
         Image6.Size = New Size(100, 100)
@@ -101,7 +103,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image5.BackgroundImage = CType(resources.GetObject("Image5.BackgroundImage"), Image)
         Image5.BorderStyle = BorderStyle.FixedSingle
         Image5.Image = CType(resources.GetObject("Image5.Image"), Image)
-        Image5.Location = New Point(264, 152)
+        Image5.Location = New Point(190, 150)
         Image5.Margin = New Padding(0)
         Image5.Name = "Image5"
         Image5.Size = New Size(100, 100)
@@ -114,7 +116,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image4.BackgroundImage = CType(resources.GetObject("Image4.BackgroundImage"), Image)
         Image4.BorderStyle = BorderStyle.FixedSingle
         Image4.Image = CType(resources.GetObject("Image4.Image"), Image)
-        Image4.Location = New Point(164, 152)
+        Image4.Location = New Point(90, 150)
         Image4.Margin = New Padding(0)
         Image4.Name = "Image4"
         Image4.Size = New Size(100, 100)
@@ -127,7 +129,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image9.BackgroundImage = CType(resources.GetObject("Image9.BackgroundImage"), Image)
         Image9.BorderStyle = BorderStyle.FixedSingle
         Image9.Image = CType(resources.GetObject("Image9.Image"), Image)
-        Image9.Location = New Point(364, 252)
+        Image9.Location = New Point(290, 250)
         Image9.Margin = New Padding(0)
         Image9.Name = "Image9"
         Image9.Size = New Size(100, 100)
@@ -140,7 +142,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image8.BackgroundImage = CType(resources.GetObject("Image8.BackgroundImage"), Image)
         Image8.BorderStyle = BorderStyle.FixedSingle
         Image8.Image = CType(resources.GetObject("Image8.Image"), Image)
-        Image8.Location = New Point(264, 252)
+        Image8.Location = New Point(190, 250)
         Image8.Margin = New Padding(0)
         Image8.Name = "Image8"
         Image8.Size = New Size(100, 100)
@@ -153,7 +155,7 @@ Partial Class Jigsaw_Puzzle_Game
         Image7.BackgroundImage = CType(resources.GetObject("Image7.BackgroundImage"), Image)
         Image7.BorderStyle = BorderStyle.FixedSingle
         Image7.Image = CType(resources.GetObject("Image7.Image"), Image)
-        Image7.Location = New Point(164, 252)
+        Image7.Location = New Point(90, 250)
         Image7.Margin = New Padding(0)
         Image7.Name = "Image7"
         Image7.Size = New Size(100, 100)
@@ -161,12 +163,22 @@ Partial Class Jigsaw_Puzzle_Game
         Image7.TabStop = False
         Image7.Tag = "7"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(477, 50)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(301, 300)
+        PictureBox1.TabIndex = 9
+        PictureBox1.TabStop = False
+        ' 
         ' Jigsaw_Puzzle_Game
         ' 
         AllowDrop = True
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(PictureBox1)
         Controls.Add(Image9)
         Controls.Add(Image8)
         Controls.Add(Image7)
@@ -187,6 +199,7 @@ Partial Class Jigsaw_Puzzle_Game
         CType(Image9, ComponentModel.ISupportInitialize).EndInit()
         CType(Image8, ComponentModel.ISupportInitialize).EndInit()
         CType(Image7, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -199,4 +212,5 @@ Partial Class Jigsaw_Puzzle_Game
     Friend WithEvents Image9 As PictureBox
     Friend WithEvents Image8 As PictureBox
     Friend WithEvents Image7 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

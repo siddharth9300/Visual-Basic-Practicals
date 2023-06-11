@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TabControl1 = New TabControl()
+        CompriBox = New TabControl()
         TabPage1 = New TabPage()
         ans = New Label()
         widBox = New TextBox()
@@ -51,6 +51,15 @@ Partial Class Form1
         Button2 = New Button()
         priBox = New TextBox()
         Label5 = New Label()
+        TabPage9 = New TabPage()
+        ComtimBox = New TextBox()
+        Label11 = New Label()
+        comAns = New Label()
+        ComratBox = New TextBox()
+        Label15 = New Label()
+        ComBtn = New Button()
+        comBox = New TextBox()
+        Label16 = New Label()
         TabPage5 = New TabPage()
         ferAns = New Label()
         Button3 = New Button()
@@ -82,11 +91,12 @@ Partial Class Form1
         btnjigsaw = New Button()
         btnquadraticsolver = New Button()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
-        TabControl1.SuspendLayout()
+        CompriBox.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
         TabPage3.SuspendLayout()
         siPage.SuspendLayout()
+        TabPage9.SuspendLayout()
         TabPage5.SuspendLayout()
         TabPage6.SuspendLayout()
         TabPage4.SuspendLayout()
@@ -94,24 +104,25 @@ Partial Class Form1
         TabPage8.SuspendLayout()
         SuspendLayout()
         ' 
-        ' TabControl1
+        ' CompriBox
         ' 
-        TabControl1.Controls.Add(TabPage1)
-        TabControl1.Controls.Add(TabPage2)
-        TabControl1.Controls.Add(TabPage3)
-        TabControl1.Controls.Add(siPage)
-        TabControl1.Controls.Add(TabPage5)
-        TabControl1.Controls.Add(TabPage6)
-        TabControl1.Controls.Add(TabPage4)
-        TabControl1.Controls.Add(TabPage7)
-        TabControl1.Controls.Add(TabPage8)
-        TabControl1.Dock = DockStyle.Fill
-        TabControl1.Location = New Point(0, 0)
-        TabControl1.Multiline = True
-        TabControl1.Name = "TabControl1"
-        TabControl1.SelectedIndex = 0
-        TabControl1.Size = New Size(1184, 516)
-        TabControl1.TabIndex = 8
+        CompriBox.Controls.Add(TabPage1)
+        CompriBox.Controls.Add(TabPage2)
+        CompriBox.Controls.Add(TabPage3)
+        CompriBox.Controls.Add(siPage)
+        CompriBox.Controls.Add(TabPage9)
+        CompriBox.Controls.Add(TabPage5)
+        CompriBox.Controls.Add(TabPage6)
+        CompriBox.Controls.Add(TabPage4)
+        CompriBox.Controls.Add(TabPage7)
+        CompriBox.Controls.Add(TabPage8)
+        CompriBox.Dock = DockStyle.Fill
+        CompriBox.Location = New Point(0, 0)
+        CompriBox.Multiline = True
+        CompriBox.Name = "CompriBox"
+        CompriBox.SelectedIndex = 0
+        CompriBox.Size = New Size(1184, 516)
+        CompriBox.TabIndex = 8
         ' 
         ' TabPage1
         ' 
@@ -195,7 +206,7 @@ Partial Class Form1
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(976, 488)
+        TabPage2.Size = New Size(1176, 488)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Area of Circle"
         TabPage2.UseVisualStyleBackColor = True
@@ -249,7 +260,7 @@ Partial Class Form1
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(976, 488)
+        TabPage3.Size = New Size(1176, 488)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Volume of Cylinder"
         TabPage3.UseVisualStyleBackColor = True
@@ -324,7 +335,7 @@ Partial Class Form1
         siPage.Location = New Point(4, 24)
         siPage.Name = "siPage"
         siPage.Padding = New Padding(3)
-        siPage.Size = New Size(976, 488)
+        siPage.Size = New Size(1176, 488)
         siPage.TabIndex = 3
         siPage.Text = "Simple Interest"
         siPage.UseVisualStyleBackColor = True
@@ -406,6 +417,101 @@ Partial Class Form1
         Label5.TabIndex = 20
         Label5.Text = "Principle"
         ' 
+        ' TabPage9
+        ' 
+        TabPage9.Controls.Add(ComtimBox)
+        TabPage9.Controls.Add(Label11)
+        TabPage9.Controls.Add(comAns)
+        TabPage9.Controls.Add(ComratBox)
+        TabPage9.Controls.Add(Label15)
+        TabPage9.Controls.Add(ComBtn)
+        TabPage9.Controls.Add(comBox)
+        TabPage9.Controls.Add(Label16)
+        TabPage9.Location = New Point(4, 24)
+        TabPage9.Name = "TabPage9"
+        TabPage9.Padding = New Padding(3)
+        TabPage9.Size = New Size(1176, 488)
+        TabPage9.TabIndex = 9
+        TabPage9.Text = "Compound Interest"
+        TabPage9.UseVisualStyleBackColor = True
+        ' 
+        ' ComtimBox
+        ' 
+        ComtimBox.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        ComtimBox.Location = New Point(395, 207)
+        ComtimBox.Name = "ComtimBox"
+        ComtimBox.Size = New Size(100, 39)
+        ComtimBox.TabIndex = 35
+        ComtimBox.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.Location = New Point(268, 207)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(70, 32)
+        Label11.TabIndex = 34
+        Label11.Text = "Time"
+        ' 
+        ' comAns
+        ' 
+        comAns.AutoSize = True
+        comAns.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        comAns.Location = New Point(283, 265)
+        comAns.Name = "comAns"
+        comAns.Size = New Size(0, 32)
+        comAns.TabIndex = 33
+        ' 
+        ' ComratBox
+        ' 
+        ComratBox.BackColor = SystemColors.Window
+        ComratBox.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        ComratBox.Location = New Point(395, 140)
+        ComratBox.Name = "ComratBox"
+        ComratBox.Size = New Size(100, 39)
+        ComratBox.TabIndex = 32
+        ComratBox.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label15.Location = New Point(268, 140)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(65, 32)
+        Label15.TabIndex = 31
+        Label15.Text = "Rate"
+        ' 
+        ' ComBtn
+        ' 
+        ComBtn.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        ComBtn.Location = New Point(345, 337)
+        ComBtn.Name = "ComBtn"
+        ComBtn.Size = New Size(183, 70)
+        ComBtn.TabIndex = 30
+        ComBtn.Text = "Calculate"
+        ComBtn.UseVisualStyleBackColor = True
+        ' 
+        ' comBox
+        ' 
+        comBox.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        comBox.Location = New Point(395, 73)
+        comBox.Name = "comBox"
+        comBox.Size = New Size(100, 39)
+        comBox.TabIndex = 29
+        comBox.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label16.Location = New Point(259, 73)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(115, 32)
+        Label16.TabIndex = 28
+        Label16.Text = "Principle"
+        ' 
         ' TabPage5
         ' 
         TabPage5.Controls.Add(ferAns)
@@ -415,7 +521,7 @@ Partial Class Form1
         TabPage5.Location = New Point(4, 24)
         TabPage5.Name = "TabPage5"
         TabPage5.Padding = New Padding(3)
-        TabPage5.Size = New Size(976, 488)
+        TabPage5.Size = New Size(1176, 488)
         TabPage5.TabIndex = 4
         TabPage5.Text = "Fahrenheit to Celsius"
         TabPage5.UseVisualStyleBackColor = True
@@ -424,7 +530,7 @@ Partial Class Form1
         ' 
         ferAns.AutoSize = True
         ferAns.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
-        ferAns.Location = New Point(130, 220)
+        ferAns.Location = New Point(264, 211)
         ferAns.Name = "ferAns"
         ferAns.Size = New Size(0, 32)
         ferAns.TabIndex = 23
@@ -471,7 +577,7 @@ Partial Class Form1
         TabPage6.Location = New Point(4, 24)
         TabPage6.Name = "TabPage6"
         TabPage6.Padding = New Padding(3)
-        TabPage6.Size = New Size(976, 488)
+        TabPage6.Size = New Size(1176, 488)
         TabPage6.TabIndex = 5
         TabPage6.Text = "Greatest of 3 Number"
         TabPage6.UseVisualStyleBackColor = True
@@ -566,7 +672,7 @@ Partial Class Form1
         TabPage4.Location = New Point(4, 24)
         TabPage4.Name = "TabPage4"
         TabPage4.Padding = New Padding(3)
-        TabPage4.Size = New Size(976, 488)
+        TabPage4.Size = New Size(1176, 488)
         TabPage4.TabIndex = 6
         TabPage4.Text = "Calculator using Select Case"
         TabPage4.UseVisualStyleBackColor = True
@@ -658,7 +764,7 @@ Partial Class Form1
         TabPage7.Location = New Point(4, 24)
         TabPage7.Name = "TabPage7"
         TabPage7.Padding = New Padding(3)
-        TabPage7.Size = New Size(976, 488)
+        TabPage7.Size = New Size(1176, 488)
         TabPage7.TabIndex = 7
         TabPage7.Text = "Table"
         TabPage7.UseVisualStyleBackColor = True
@@ -698,7 +804,7 @@ Partial Class Form1
         TabPage8.Location = New Point(4, 24)
         TabPage8.Name = "TabPage8"
         TabPage8.Padding = New Padding(3)
-        TabPage8.Size = New Size(976, 488)
+        TabPage8.Size = New Size(1176, 488)
         TabPage8.TabIndex = 8
         TabPage8.Text = "Other"
         TabPage8.UseVisualStyleBackColor = True
@@ -732,10 +838,10 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1184, 516)
-        Controls.Add(TabControl1)
+        Controls.Add(CompriBox)
         Name = "Form1"
         Text = "Programs"
-        TabControl1.ResumeLayout(False)
+        CompriBox.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
         TabPage2.ResumeLayout(False)
@@ -744,6 +850,8 @@ Partial Class Form1
         TabPage3.PerformLayout()
         siPage.ResumeLayout(False)
         siPage.PerformLayout()
+        TabPage9.ResumeLayout(False)
+        TabPage9.PerformLayout()
         TabPage5.ResumeLayout(False)
         TabPage5.PerformLayout()
         TabPage6.ResumeLayout(False)
@@ -755,7 +863,7 @@ Partial Class Form1
         TabPage8.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents CompriBox As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents ans As Label
@@ -817,4 +925,13 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents btnquadraticsolver As Button
     Friend WithEvents btnjigsaw As Button
+    Friend WithEvents TabPage9 As TabPage
+    Friend WithEvents ComtimBox As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents comAns As Label
+    Friend WithEvents ComratBox As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents ComBtn As Button
+    Friend WithEvents comBox As TextBox
+    Friend WithEvents Label16 As Label
 End Class
