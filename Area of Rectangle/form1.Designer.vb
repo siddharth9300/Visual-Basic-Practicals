@@ -840,7 +840,7 @@ Partial Class Form1
         ClientSize = New Size(1184, 516)
         Controls.Add(CompriBox)
         Name = "Form1"
-        Text = "Programs"
+        Text = "Programs -Siddharth Jain IMCA-4"
         CompriBox.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
